@@ -27,3 +27,11 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDJLptd+vrTscMehvFro+sIFgEz8Y5m8+9xxEd9Scm
 
 
 #### what is rpm
+
+
+#### how to use username and password to login to a host? and is there any using putty to do that? why sometimes ssh use a @xx.com form to specify the host to login
+
+#### myroot workspace is /root , how to add an user and create an user work space for that
+[add ssh key](https://stackoverflow.com/questions/37609863/add-ssh-key-to-existing-droplet-in-digital-ocean)
+
+#### What is csrf

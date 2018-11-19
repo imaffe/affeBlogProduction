@@ -1,5 +1,5 @@
+# YOU MIGHT NEED TO CHANGE THE PERMISSION OF THIS FILE!
 # build dependencies on an CentOS virtual machine
-
 # install dependencies
 sudo yum groupinstall "Development tools"
 sudo yum install openssl openssl-devel sqlite-devel zlib-develbzip2-devel
@@ -16,3 +16,7 @@ sudo ln -s /bin/python3.6 /bin/python3
 sudo yum install python36u-pip
 # rename pip3
 sudo ln -s /bin/pip3.6 /bin/pip3
+
+# install python failed because
+# install emacs editor for me
+sudo yum install emacs
