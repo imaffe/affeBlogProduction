@@ -74,7 +74,7 @@ first we need to check re github repo structure, in case we contained something 
 
 first thing : add your ssh pub key to ~/.ssh/authorized_keys
 
-
+add 3 inspector : affe_window1 ~ affe_window3 pwd : 990513
 
 [configure ssh](https://www.linpx.com/p/configure-the-ssh-key-on-centos.html)
 
@@ -102,5 +102,15 @@ chmod -v u-w /etc/sudoers
 [ssh permission](https://wiki.centos.org/HowTos/Network/SecuringSSH)
 
 add 2 ssh pub key to the ./ssh authen file
+
+
+
+
+
+do as the SXY tutorial
+
+change the SElinux network root
+
+[stackoverflow solution](https://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx)
 
 #### install python3.6

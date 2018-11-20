@@ -49,3 +49,9 @@ web server gateway interface. [wsgi](https://www.liaoxuefeng.com/wiki/0013747381
 #### what is difference between python and python-dev, and what will happen if i use python only
 
 #### what is epel
+
+#### what is yum install -y
+
+#### what is difference between pip3 and pip
+
+#### what is the meaning in error log
