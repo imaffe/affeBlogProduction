@@ -1,0 +1,7 @@
+<uwsgi>
+    <socket>:8080</socket>
+    <chdir>/home/admin/affeBlogProduction/affeBlog</chdir>
+    <module>affeBlog.wsgi</module>
+    <process>4</process>
+    <daemonize>uwsgi.log</daemonize>
+</uwsgi>
