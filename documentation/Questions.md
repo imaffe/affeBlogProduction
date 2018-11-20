@@ -55,3 +55,7 @@ web server gateway interface. [wsgi](https://www.liaoxuefeng.com/wiki/0013747381
 #### what is difference between pip3 and pip
 
 #### what is the meaning in error log
+
+#### why will the permission denied error always happen
+
+this is because the fucking SElinux enforce

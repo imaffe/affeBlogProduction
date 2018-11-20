@@ -25,3 +25,5 @@ sudo yum install emacs
 sudo pip3 install --upgrade pip
 
 sudo pip3 install uwsgi
+
+sudo yum install nginx
