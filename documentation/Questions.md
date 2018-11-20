@@ -41,3 +41,5 @@ csrf is the abbr. for cross-site request forgery.[Cross Site Request Forgery (or
 
 #### what is wsgi?
 web server gateway interface. [wsgi](https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832689740b04430a98f614b6da89da2157ea3efe2000)
+
+####  what is SCL (software management)
