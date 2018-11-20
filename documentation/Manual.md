@@ -70,4 +70,33 @@ first we need to check re github repo structure, in case we contained something 
     - install mysql
   - Run Build Scripts : TODO 
 
+#### add user : admin
+
+putty doesn't support ssh-keygen ssh, must use putty generated.
+
+so first you need to use puttygen [puttygen tutorial](https://www.ssh.com/ssh/putty/linux/puttygen)
+
+``` shell
+adduser admin
+passwd admin ## password
+
+# give chmod
+cd /etc
+chmod -v u+w /etc/sudoers
+emacs sudoers
+# add a line at ## Allow root to run any commands anywhere
+# admin  ALL=(ALL)    ALL ## not sure about the space matter or not
+# then change mod
+chmod -v u-w /etc/sudoers
+# code from the following link
+```
+
+[sudo permission](https://www.cnblogs.com/woshimrf/p/centos-new-user.html)
+
+``` shell
+## change ssh config
+```
+
+[ssh permission](https://wiki.centos.org/HowTos/Network/SecuringSSH)
+
 #### install python3.6

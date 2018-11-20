@@ -12,4 +12,4 @@ class IndexModelAdmin(admin.ModelAdmin):
     class Meta:
         model = Post
 
-admin.site.register(Post, IndexModelAdmin)
+admin.site.register(Post, IndexModelAdmin)bbb

@@ -1,0 +1,19 @@
+## 这是一个用Heroku部署django的例子
+- 本文目的是为用DigitalOcean裸服务器搭建django项目作为铺垫，学习一下django项目本身的一些设置和基本的服务器管理知识，其他的运维细节可以之后再去思考
+- 修改settings.py  : **尚未完成**
+  - 把DEBUG选项设置成false
+  - 把SECRET_KEY改成从server的某个文件里面读，或者比如os.environ['SECRET_KEY']
+    - 这个SECRET_KEY会在哪里用到呢？每个项目都不一样吗？
+  - 用 python3 manage.py check --deploy 可以查看所有需要更改的地方[CheckList](https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/)
+- 申请一个Heroku 的Django项目
+  - affe的Heroku项目信息 passwd: zhangyufei@990513
+  - Heroku把django项目运行在Dynos容器中
+  - 我们需要提供给dynos的文件列表
+    - runtime.txt
+    - requirements.txt
+    - Procfile
+    - wsgi.py
+- 创建Procfile （注意没有文件扩展名）
+  - 
+- 连接数据库
+- 处理静态文件
