@@ -70,11 +70,13 @@ first we need to check re github repo structure, in case we contained something 
     - install mysql
   - Run Build Scripts : TODO 
 
-#### add user : admin
+#### add user : admin passwd : 990513
 
-putty doesn't support ssh-keygen ssh, must use putty generated.
+first thing : add your ssh pub key to ~/.ssh/authorized_keys
 
-so first you need to use puttygen [puttygen tutorial](https://www.ssh.com/ssh/putty/linux/puttygen)
+
+
+[configure ssh](https://www.linpx.com/p/configure-the-ssh-key-on-centos.html)
 
 ``` shell
 adduser admin
@@ -98,5 +100,7 @@ chmod -v u-w /etc/sudoers
 ```
 
 [ssh permission](https://wiki.centos.org/HowTos/Network/SecuringSSH)
+
+add 2 ssh pub key to the ./ssh authen file
 
 #### install python3.6
