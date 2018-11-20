@@ -6,7 +6,8 @@ nginx is more common in companies and
 #### create a admin user on my centos machine
 - username on RescuerUbuntu: admin 
 - password for admin : 990513
-  ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAoHjDOCKt0gwjPiuGbPdk1A9uBrgH9q1bNvPl4/r+4jwCgQaAZLsIJ7YFT39fNaAnfgIHXpd4Xcqz9Y5bKW5GFuPzE1oUjp+CSyDTSTwFhcNt+1TKQWmCbyCg5CXLy04mLJWeBYecH7Fb6oGlvRO0psQ/hefWaVo+9mawBCL7npbYM5JP1NDHKNifSRN3Hqpphu58P1epW/cu/Ik9y2yQvxrO1z9Cw0L2QCtYtrZBihFKm2HTqBXi53U4lHQuBF3AoI0XkJkfLePxwPBgDqcORq9JZIgzFEeQjUb1ZizuLukDULE68OJLP7WLYLeE5v2K1Fhx45/F17PYw2IwR7bbeQ== affe@ThinkpadUbuntu
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDJLptd+vrTscMehvFro+sIFgEz8Y5m8+9xxEd9Scm00t+OXPFhpg3N30g+ByBU+YQ+g1jBiPPjpKjbn3zTJg3P2o8vOfmkOGPexJNPjLTeoh8m49QjEQt3CgqxiIfOfCdXqhMRxM8cELLg3bJosGTeE4ChhFHhdPTD8/RgZ60z2sHwnLyskMVwOJqF5KkOR0qNa7oZ8/aC+p4oqhGWL50kkEX+PFuyFOjh5rs14YuOFQ0DveWi9nMsq0xW4jnbhCAZ1rQZx9yJ4ta1PZvC8tWGK9Je+w5y+nFaxwyQOajUt1lN5OFh6H+MWM1yedcQ+ljkZoYd6IhmnI9WpfGCejv affeisme@gmail.com
+
 #### mysql
 
 #### django configure file
