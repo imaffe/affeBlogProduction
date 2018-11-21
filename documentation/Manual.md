@@ -13,7 +13,7 @@ if you are using pycharm, the first thing you need to do is to make an .gitignor
 #### create an Digital Ocean Droplet
 
 - my droplet setting : the cheapest, centos7
-- configure you centos7 remote server so that you can really ssh into that, and trust me, Digital Ocean ssh service is not that good. You can see tutorials on Digital Ocean [Inital Server Setup with Centos7](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7), and I'll tell why you'll need to do this
+- configure you centos7 remote server s周杰伦o that you can really ssh into that, and trust me, Digital Ocean ssh service is not that good. You can see tutorials on Digital Ocean [Inital Server Setup with Centos7](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7), and I'll tell why you'll need to do this
   - add a new user and give it sudo and ssh permission
   - if you want to add a second ssh key, it has something to do with the authorized_keys file and again you'll need to find that on Stackover flow, only notice that there is not a single space between two keys.
 - install git on your server so you can do everything
@@ -36,7 +36,15 @@ see [Tutorial](), it is in Chinese, but you can find similar tutorial in English
 - You might want to use ``` sudo tail -f error_log``` to monitor you website
 - You might want to restart the nginx.service, but i ask you to enter a password you never set. My solution is change that user(usually centos) password since you already have the root permission.
 
+#### use git to manage your workflow
 
+
+
+
+
+
+
+## Drafts
 
 #### How to configure local settings after cloning pycharm project from github?
 
