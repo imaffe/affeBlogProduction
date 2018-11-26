@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
 # TODO slugify and reverse not found
@@ -7,6 +8,7 @@ from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.utils import timezone
 from django.utils.text import slugify
+from django.
 from .utils import unique_slug_generator
 
 
@@ -15,10 +17,14 @@ class PostQuerySet(models.query.QuerySet):
         return self.filter(draft=False)
 
     def published(self):
-        return self.filter(publish__lte=timezone.now()).not_draft
+        return self.filter(publish__lte=timezone.now()).not_draft()
+
+# TODO should i change this to a singleton? or declare it inside the post?
+# it seem this pattern is suggested by the official documentation
 
 
 class PostManager(models.Manager):
+    # this is an override of the get_queryset function
     def get_queryset(self, *args, **kwargs):
         return PostQuerySet(self.model, using=self._db)
 
@@ -29,21 +35,22 @@ class PostManager(models.Manager):
 def upload_location(instance, filename):
     PostModel = instance.__class__
     new_id = PostModel.objects.order_by("id").last().id + 1
-    return "%s%s" %(new_id, filename)
+    return "%s%s" % (new_id, filename)
 
-
+# TODO is a model like defining a schema and the self object is one of the instance?
 class Post(models.Model):
     # TODO what is the authuser here means?
-    # user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
+    user = models.ForeignKey(User, default=1)
     title = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)
     # TODO why here is an upload location
+    # TODO where is the image stored?
     image = models.ImageField(upload_to=upload_location,
                               null=True,
                               blank=True,
                               width_field="width_field",
                               height_field="height_field")
-
+    # TODO why do we need these two field
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     content = models.TextField()
@@ -51,7 +58,7 @@ class Post(models.Model):
     publish = models.DateField(auto_now=False, auto_now_add=False)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
-
+    # like override the default objects manager
     objects = PostManager()
 
     def __unicode__(self):
@@ -69,12 +76,12 @@ class Post(models.Model):
         ordering = ["-timestamp", "-updated"]
 
 
-    # TODO Why have this function
+    # TODO Why have this function and this caused a bug in server
     # @property
     # def title(self):
     #     return "Title"
 
-
+# it seems this function is abandoned
 def create_slug(instance, new_slug=None):
     slug = slugify(instance.title)
     if new_slug is not None:
@@ -86,11 +93,12 @@ def create_slug(instance, new_slug=None):
         return create_slug(instance, new_slug=new_slug)
     return slug
 
-
+# TODO what is this function for
 def pre_save_post_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = unique_slug_generator(instance)
 
 
 # TODO what is presave
+#
 pre_save.connect(pre_save_post_receiver, sender=Post)
