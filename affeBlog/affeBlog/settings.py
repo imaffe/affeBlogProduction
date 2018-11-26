@@ -133,14 +133,19 @@ LOGGING = {
     'handlers': {
         'console_out': {
             'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'stream': sys.stdout
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'log/all.log'),
+            'maxBytes':1024*1024*5,
+            'backupCount':5,
+            'formatter': 'verbose',
         },
         'console_err': {
-            'level': 'WARNING',
-            'class': 'logging.StreamHandler',
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'log/error.log'),
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
             'formatter': 'verbose',
-            'stream': sys.stderr
         },
         # # TODO: Warning messages are sent to admin emails
         # 'mail_admins': {
