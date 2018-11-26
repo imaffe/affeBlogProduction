@@ -68,9 +68,11 @@ class Post(models.Model):
     class Meta:
         ordering = ["-timestamp", "-updated"]
 
-    @property
-    def title(self):
-        return "Title"
+
+    # TODO Why have this function
+    # @property
+    # def title(self):
+    #     return "Title"
 
 
 def create_slug(instance, new_slug=None):
