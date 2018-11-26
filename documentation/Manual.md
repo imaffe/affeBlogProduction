@@ -28,7 +28,7 @@ The build script is in build/build.sh in my git https://www.digitalocean.com/com
 
 #### change your settings in Django, uwsgi, nginx
 
-see [Tutorial](), it is in Chinese, but you can find similar tutorial in English easily. I will post points i think that are worthy of your attention. 
+see [Tutorial](https://blog.csdn.net/eightbrother888/article/details/79503716), it is in Chinese, but you can find similar tutorial in English easily. I will post points i think that are worthy of your attention. 
 
 - your nginx doesn't work might because you are using a SElinux, and there are some things I don't know why. I found some answers to this might help you with this if your nginx doesn't work. [13: Permission Denied](https://www.digitalocean.com/community/questions/403-forbidden-nginx-13-permission-denied)  [Nginx Error](https://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx)
 - you might have other nginx permission error. Open your nginx.conf (you must be familiar with this file if you tried hard to fix bugs), find 'user nobody' or something like that. You might want to change it to 'user root' or 'user admin'. Use ``` ps -aux``` to find out which group is running nginx service
