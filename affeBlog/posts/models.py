@@ -33,7 +33,8 @@ def upload_location(instance, filename):
 
 
 class Post(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
+    # TODO what is the authuser here means?
+    #user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
     title = models.CharField(max_length=120)
     slug = models.slugField(unique=True)
     # TODO why here is an upload location
