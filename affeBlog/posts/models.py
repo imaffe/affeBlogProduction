@@ -8,7 +8,6 @@ from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.utils import timezone
 from django.utils.text import slugify
-from django.
 from .utils import unique_slug_generator
 
 
@@ -40,7 +39,7 @@ def upload_location(instance, filename):
 # TODO is a model like defining a schema and the self object is one of the instance?
 class Post(models.Model):
     # TODO what is the authuser here means?
-    user = models.ForeignKey(User, default=1)
+    user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     title = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)
     # TODO why here is an upload location
